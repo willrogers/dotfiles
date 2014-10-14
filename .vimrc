@@ -28,5 +28,6 @@ let g:is_bash=1
 " per-language
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype c setlocal tabstop=8 shiftwidth=8 softtabstop=8
-
+autocmd Filetype c setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
+autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
