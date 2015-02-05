@@ -1,0 +1,30 @@
+
+function start_agent {
+ echo "Initializing new SSH agent..."
+ /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+ echo succeeded
+ chmod 600 "${SSH_ENV}"
+ . "${SSH_ENV}" > /dev/null
+ /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+  . "${SSH_ENV}" > /dev/null
+  #ps ${SSH_AGENT_PID} doesn't work under cywgin
+  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    start_agent;
+  }
+else
+  start_agent;
+fi
+
+alias ls='ls --color=tty'
+
+# Modern git version
+module load git/2
+# Load matlab
+module load matlab/R2014a
+# Start fish by default
+export SHELL=/dls_sw/prod/tools/RHEL6-x86_64/defaults/bin/fish
+
