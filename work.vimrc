@@ -49,6 +49,11 @@ syntax on
 " line numbers
 set number
 
+" enable mouse and don't select line numbers
+set mouse=a
+
+" Y should yank to end of line
+map Y y$
 " clear search highlighting
 map \ :noh<cr>
 " search preferences
