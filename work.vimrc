@@ -57,7 +57,7 @@ set mouse=a
 " Y should yank to end of line
 map Y y$
 " clear search highlighting
-map \ :noh<cr>
+map <leader>c :noh<cr>
 " search preferences
 set hlsearch
 set incsearch
@@ -81,7 +81,7 @@ let g:is_bash=1
 " per-language
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype c setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
+autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype xml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 
