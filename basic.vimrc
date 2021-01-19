@@ -33,3 +33,6 @@ autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype c setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
 autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" YAML: https://lornajane.net/posts/2018/vim-settings-for-working-with-yaml
+autocmd! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab foldmethod=indent foldlevel=5
