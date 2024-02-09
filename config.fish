@@ -1,5 +1,5 @@
 # It can help to know when these files are sourced.
-echo "Sourcing config.fish ..." >&2
+echo "[Sourcing config.fish ...]" >&2
 
 set DEFAULT_USER rogersw
 
@@ -42,3 +42,37 @@ alias gf "git fetch --all --prune"
 alias gp "git pull --ff-only"
 alias gdiff "git diff --no-index"
 alias gs "git status"
+alias ls "eza"
+alias tds "tmux new-session -d -s"
+
+function ddiff
+    gdiff -u $argv | delta
+end
+
+# Virtualenvs
+alias dv deactivate
+function sv
+    set venv_name venv
+    if set -q argv[1]
+        set venv_name $argv[1]
+    end
+    source $venv_name/bin/activate.fish
+end
+
+
+if status is-login
+    echo "[Starting keychain ...]"
+    keychain --eval id_ed25519
+end
+
+if test -f ~/.keychain/(hostname)-gpg-fish
+    source ~/.keychain/(hostname)-gpg-fish
+end
+
+if test -f ~/.keychain/(hostname)-fish
+    source ~/.keychain/(hostname)-fish
+end
+fish_add_path /usr/local/opt/openjdk@11/bin
+
+# Set up pyenv
+pyenv init - | source
