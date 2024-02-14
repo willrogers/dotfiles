@@ -1,0 +1,70 @@
+# In separate Git repos.
+/code/
+
+# Standard directories
+/Applications/
+/Desktop/
+/Documents/
+/Downloads/
+/Dropbox/
+/Library/
+/Movies/
+/Music/
+/Pictures/
+/Public/
+
+# Mac stuff
+.DS_Store
+
+# Vim temporary files
+*.swp
+*.swo
+
+# Fish
+/.config/fish/fish_variables
+
+# Various caches
+
+/.bash_history
+/.bash_sessions/
+# CDK cache
+/.cdk/
+# Cpan for Perl
+/.cpan/
+/.cpanm/
+/.jenkins-hpl-map
+/.keychain/
+/.lesshst
+# Local Maven repository
+/.m2/repository/
+/.npm/
+/.oracle_jre_usage/
+# Pyenv installations and shims
+/.pyenv/
+/.pylint.d/
+/.python_history
+/.psql
+/.psql_history
+/.redhat/
+/.vscode/extensions/
+/.vim/
+/.viminfo
+# WDM? Chromedriver?
+/.wdm/
+/.wget-hsts
+/nltk_data/
+
+# Config items that shouldn't be saved.
+/.config/containers/
+/.config/htop/
+/.config/iterm2/
+/.config/jgit/
+/.config/pudb/
+
+# Not for saving
+/.local/share/
+/.ssh/
+
+# Probably should ignore
+/.anyconnect
+/.cisco/
