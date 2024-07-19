@@ -3,6 +3,7 @@ set tabstop=4
 set expandtab
 set backspace=2
 set shiftwidth=4
+syntax on
 
 " line numbers
 set number
